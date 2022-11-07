@@ -31,7 +31,7 @@ function _prompt_aws_expire
     if test -n "$AWS_SESSION_EXPIRATION"
         set aws_minute_expire $(printf '%.f\n' $(math "$(aws-sts --diff $AWS_SESSION_EXPIRATION)/60-1"))
     else 
-        set aws_expire $(aws-sts -t $AWS_PROFILE)
+        set aws_expire $(aws-sts -t $AWS_DEFAULT_PROFILE)
         if test -n "$aws_expire"; 
             set aws_minute_expire $(printf '%.f\n' $(math "$aws_expire/60-1"))
         else
