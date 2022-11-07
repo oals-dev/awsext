@@ -10,5 +10,4 @@ Mainly uses the integration of the [aws-sts](https://github.com/oals-dev/aws-sts
 Should implement:
 
 - `asp` - AWS Switch Profile
-- `agp` - Display current AWS Profile
 - prompt for fish Tide theme
